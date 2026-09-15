@@ -1,0 +1,6 @@
+{
+  "name": "Ola Mai Fila Company",
+  "description": "Premium Cap Washing, Neating (Tanganran, Glass Finish) and Cap Sales in Ilorin, Kwara State.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

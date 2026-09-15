@@ -1,0 +1,2003 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLA MAI FILA COMPANY | Premium Cap Washing, Neating & Sales in Ilorin</title>
+    <meta name="description" content="OLA MAI FILA COMPANY - Clean, modern, mobile-friendly cap washing, neating (Starch Only, Tanganran, Glass Finish), and traditional cap catalog in Ilorin, Kwara State." />
+    <meta property="og:title" content="OLA MAI FILA COMPANY | Premium Cap Washing, Neating & Sales" />
+    <meta property="og:description" content="Professional cap care, neating, and authentic traditional caps. Workshop at Ola Compound, Banni Area, Ilorin. Contact via WhatsApp: +2349065976587." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0A2540" />
+
+    <style>
+      /* --- BRAND PALETTE & CORE VARIABLES --- */
+      :root {
+        --color-primary: #0A2540;        /* Deep Blue */
+        --color-primary-dark: #07192b;   /* Darker Navy */
+        --color-gold: #D4AF37;           /* Rich Gold */
+        --color-gold-hover: #b8972e;     /* Muted Gold */
+        --color-gold-subtle: #faf5e6;    /* Subtle Gold Tint */
+        --color-gold-border: rgba(212, 175, 55, 0.28);
+        --color-black: #111111;          /* Pure Black */
+        --color-white: #FFFFFF;
+        --color-gray-50: #F9FAFB;
+        --color-gray-100: #F3F4F6;
+        --color-gray-200: #E5E7EB;
+        --color-gray-500: #6B7280;
+        --color-gray-700: #374151;
+        --color-gray-900: #111827;
+        --color-whatsapp: #25D366;
+        --color-whatsapp-hover: #1EBE5B;
+        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --radius-full: 9999px;
+      }
+
+      /* --- RESET & BASE STYLES --- */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background-color: var(--color-gray-50);
+        color: var(--color-gray-900);
+        line-height: 1.6;
+        font-size: 16px; /* Prominent, legible base size */
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      button, input, select {
+        font-family: inherit;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 18px;
+      }
+
+      /* --- 1. ANIMATED PRELOADER / LOADING SCREEN --- */
+      #preloader {
+        position: fixed;
+        inset: 0;
+        background-color: var(--color-black);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+
+      #preloader.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .preloader-spinner-wrap {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .preloader-ring {
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius-full);
+        border: 3.5px solid rgba(212, 175, 55, 0.2);
+        border-top-color: var(--color-gold);
+        animation: spinRing 0.9s linear infinite;
+      }
+
+      .preloader-logo {
+        width: 70px;
+        height: 70px;
+        border-radius: var(--radius-full);
+        object-fit: cover;
+        border: 2px solid var(--color-gold);
+        background-color: var(--color-primary-dark);
+        z-index: 2;
+      }
+
+      .preloader-text {
+        margin-top: 20px;
+        color: var(--color-gold);
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        animation: pulseFade 1.6s ease-in-out infinite;
+      }
+
+      @keyframes spinRing {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @keyframes pulseFade {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+
+      /* --- 2. STICKY HEADER --- */
+      #main-header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        border-bottom: 1px solid var(--color-gold);
+        z-index: 1000;
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+      }
+
+      .brand-logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand-logo-img {
+        height: 45px;
+        width: 45px;
+        border-radius: var(--radius-full);
+        object-fit: cover;
+        border: 1.5px solid var(--color-gold);
+        background-color: var(--color-primary-dark);
+        flex-shrink: 0;
+      }
+
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .brand-name {
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: var(--color-white);
+        line-height: 1.2;
+      }
+
+      .brand-sub {
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--color-gold);
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      /* Desktop Nav */
+      .nav-links-desktop {
+        display: none;
+        align-items: center;
+        gap: 26px;
+      }
+
+      .nav-link {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--color-gray-200);
+        padding: 6px 0;
+        transition: color 0.15s ease;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--color-gold);
+      }
+
+      .header-cta-btn {
+        display: none;
+        background-color: var(--color-gold);
+        color: var(--color-primary-dark);
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 9px 18px;
+        border-radius: var(--radius-full);
+        transition: opacity 0.15s ease;
+      }
+
+      .header-cta-btn:hover {
+        opacity: 0.9;
+      }
+
+      /* Mobile Hamburger */
+      .hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 42px;
+        height: 42px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        z-index: 1002;
+      }
+
+      .hamburger-line {
+        width: 100%;
+        height: 2.5px;
+        background-color: var(--color-gold);
+        border-radius: 2px;
+        transition: all 0.25s ease;
+      }
+
+      .hamburger-btn.open .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .hamburger-btn.open .hamburger-line:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger-btn.open .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+
+      /* Mobile Navigation Drawer */
+      .mobile-nav-overlay {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 68px);
+        background-color: rgba(7, 25, 43, 0.65);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        z-index: 998;
+      }
+
+      .mobile-nav-overlay.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-nav-drawer {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primary);
+        border-bottom: 2px solid var(--color-gold);
+        padding: 22px 18px 26px;
+        transform: translateY(-100%);
+        transition: transform 0.25s ease-out;
+        z-index: 999;
+      }
+
+      .mobile-nav-drawer.open {
+        transform: translateY(0);
+      }
+
+      .mobile-nav-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .mobile-nav-item a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: var(--color-white);
+        padding: 12px 14px;
+        border-radius: var(--radius-sm);
+        background-color: rgba(255, 255, 255, 0.05);
+        border-left: 3px solid transparent;
+        transition: background-color 0.15s ease;
+      }
+
+      .mobile-nav-item a:hover,
+      .mobile-nav-item a:active {
+        background-color: rgba(212, 175, 55, 0.12);
+        color: var(--color-gold);
+        border-left-color: var(--color-gold);
+      }
+
+      .mobile-drawer-footer {
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(212, 175, 55, 0.2);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .mobile-drawer-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: var(--color-whatsapp);
+        color: var(--color-white);
+        font-weight: 600;
+        padding: 13px;
+        border-radius: var(--radius-sm);
+        text-align: center;
+        font-size: 0.98rem;
+      }
+
+      .mobile-phone-link {
+        color: var(--color-gold);
+        font-size: 0.9rem;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      /* --- 3. HERO BANNER --- */
+      .hero-section {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        padding: 50px 0 46px;
+        border-bottom: 1px solid var(--color-gray-200);
+      }
+
+      .hero-content {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .hero-badge-pill {
+        display: inline-block;
+        border: 1px solid var(--color-gold);
+        color: var(--color-gold);
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 5px 14px;
+        border-radius: var(--radius-full);
+        margin-bottom: 18px;
+        letter-spacing: 0.5px;
+      }
+
+      .hero-headline {
+        font-size: 2.1rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 16px;
+        color: var(--color-white);
+      }
+
+      .hero-headline span {
+        color: var(--color-gold);
+      }
+
+      .hero-subtext {
+        font-size: 1.05rem;
+        color: #d1d5db;
+        margin-bottom: 24px;
+        line-height: 1.6;
+      }
+
+      /* Feature Highlights Bar */
+      .finish-badges-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--color-gold-border);
+        border-radius: var(--radius-sm);
+        padding: 12px 16px;
+        margin: 0 auto 26px;
+        max-width: 520px;
+      }
+
+      .finish-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--color-white);
+      }
+
+      .finish-tag .tag-star {
+        color: var(--color-gold);
+      }
+
+      .finish-divider {
+        color: var(--color-gold);
+        opacity: 0.5;
+        font-size: 0.9rem;
+      }
+
+      .hero-cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 13px 24px;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: var(--radius-full);
+        text-align: center;
+        cursor: pointer;
+        transition: opacity 0.15s ease;
+      }
+
+      .btn-whatsapp-primary {
+        background-color: var(--color-whatsapp);
+        color: var(--color-white);
+      }
+
+      .btn-whatsapp-primary:hover {
+        background-color: var(--color-whatsapp-hover);
+      }
+
+      .btn-outline-gold {
+        background-color: transparent;
+        color: var(--color-gold);
+        border: 1.5px solid var(--color-gold);
+      }
+
+      .btn-outline-gold:hover {
+        background-color: rgba(212, 175, 55, 0.1);
+      }
+
+      .hero-quick-perks {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        margin-top: 24px;
+        font-size: 0.88rem;
+        color: #9ca3af;
+        flex-wrap: wrap;
+      }
+
+      .perk-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* --- SECTION HEADINGS --- */
+      .section-heading-wrap {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .section-eyebrow {
+        color: var(--color-gold);
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      .section-title {
+        font-size: 1.85rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        line-height: 1.3;
+      }
+
+      .section-desc {
+        font-size: 1rem;
+        color: var(--color-gray-500);
+        max-width: 600px;
+        margin: 8px auto 0;
+        line-height: 1.55;
+      }
+
+      /* --- 4. SERVICES SECTION (Washing & Neating - No Prices) --- */
+      .services-section {
+        padding: 48px 0;
+        background-color: var(--color-white);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .service-card {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-200);
+        border-radius: var(--radius-md);
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .service-card:hover {
+        border-color: var(--color-gold);
+        box-shadow: 0 4px 12px rgba(10, 37, 64, 0.05);
+      }
+
+      .service-card-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+
+      .service-icon-box {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        background-color: var(--color-gold-subtle);
+        color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        flex-shrink: 0;
+        border: 1px solid var(--color-gold-border);
+      }
+
+      .service-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        line-height: 1.3;
+      }
+
+      .service-types-sub {
+        font-size: 0.82rem;
+        color: var(--color-gray-500);
+        display: block;
+        margin-top: 2px;
+      }
+
+      .service-desc {
+        font-size: 0.96rem;
+        color: var(--color-gray-700);
+        margin-bottom: 16px;
+        line-height: 1.55;
+      }
+
+      .service-finishes-box {
+        background-color: var(--color-gray-50);
+        border-radius: var(--radius-sm);
+        padding: 10px 12px;
+        margin-bottom: 16px;
+        font-size: 0.88rem;
+        color: var(--color-primary);
+        border-left: 3px solid var(--color-gold);
+      }
+
+      .service-features-list {
+        list-style: none;
+        margin-bottom: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .service-features-list li {
+        font-size: 0.9rem;
+        color: var(--color-gray-700);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .service-features-list li::before {
+        content: "•";
+        color: var(--color-gold);
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 0;
+      }
+
+      .service-card .btn-whatsapp {
+        margin-top: auto;
+        width: 100%;
+        padding: 11px;
+        border-radius: var(--radius-sm);
+        font-size: 0.95rem;
+      }
+
+      /* Finishes Guide Banner */
+      .finishes-banner {
+        margin-top: 36px;
+        background-color: var(--color-primary);
+        border: 1.5px solid var(--color-gold);
+        border-radius: var(--radius-md);
+        padding: 26px 20px;
+        color: var(--color-white);
+      }
+
+      .finishes-banner-title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--color-gold);
+        margin-bottom: 6px;
+        text-align: center;
+      }
+
+      .finishes-banner-desc {
+        text-align: center;
+        font-size: 0.98rem;
+        color: #d1d5db;
+        margin-bottom: 18px;
+      }
+
+      .finishes-trio-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .finish-trio-card {
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        border-radius: var(--radius-sm);
+        padding: 14px 16px;
+      }
+
+      .finish-trio-card h4 {
+        color: var(--color-gold);
+        font-size: 1.08rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .finish-trio-card p {
+        font-size: 0.92rem;
+        color: #e5e7eb;
+        line-height: 1.5;
+      }
+
+      /* --- 5. CAP STORE CATALOG (Cap Selling - Clean 2-Column Mobile Grid, No Prices) --- */
+      .store-section {
+        padding: 48px 0;
+        background-color: var(--color-gray-50);
+      }
+
+      .catalog-filters {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 24px;
+        overflow-x: auto;
+        padding-bottom: 6px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .filter-btn {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-200);
+        color: var(--color-gray-700);
+        padding: 8px 18px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.15s ease;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background-color: var(--color-primary);
+        color: var(--color-gold);
+        border-color: var(--color-primary);
+      }
+
+      /* Clean 2-Column Mobile Grid */
+      .catalog-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .product-card {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-200);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .product-card:hover {
+        border-color: var(--color-gold);
+        box-shadow: 0 4px 12px rgba(10, 37, 64, 0.06);
+      }
+
+      .product-img-wrap {
+        position: relative;
+        width: 100%;
+        padding-top: 92%;
+        background-color: #0c2033;
+        overflow: hidden;
+      }
+
+      .product-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-badge {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background-color: rgba(10, 37, 64, 0.9);
+        color: var(--color-gold);
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 3px 8px;
+        border-radius: var(--radius-sm);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .product-body {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .product-title {
+        font-size: 0.98rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        line-height: 1.35;
+        margin-bottom: 6px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 2.6em;
+      }
+
+      .product-meta {
+        font-size: 0.82rem;
+        color: var(--color-gray-500);
+        margin-bottom: 12px;
+        line-height: 1.4;
+      }
+
+      /* Clean call-to-action button without price */
+      .btn-order-product {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        background-color: var(--color-primary);
+        color: var(--color-gold);
+        font-size: 0.84rem;
+        font-weight: 600;
+        padding: 9px 10px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--color-gold-border);
+        text-align: center;
+        transition: background-color 0.15s ease;
+      }
+
+      .btn-order-product:hover,
+      .btn-order-product:active {
+        background-color: var(--color-whatsapp);
+        color: var(--color-white);
+        border-color: var(--color-whatsapp);
+      }
+
+      .btn-order-product svg {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+      }
+
+      .store-inquiry-box {
+        margin-top: 28px;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-200);
+        border-radius: var(--radius-md);
+        padding: 18px;
+        text-align: center;
+      }
+
+      .store-inquiry-box p {
+        font-size: 0.98rem;
+        color: var(--color-gray-700);
+        margin-bottom: 8px;
+        line-height: 1.5;
+      }
+
+      .link-custom-order {
+        color: var(--color-primary);
+        font-weight: 700;
+        text-decoration: underline;
+        font-size: 0.98rem;
+      }
+
+      /* --- 6. CONTACT & WORKSHOP SECTION --- */
+      .contact-section {
+        padding: 48px 0;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
+
+      .contact-grid-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .contact-info-panel {
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--color-gold-border);
+        border-radius: var(--radius-md);
+        padding: 22px;
+      }
+
+      .contact-info-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .contact-info-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        background-color: rgba(7, 25, 43, 0.6);
+        border-radius: var(--radius-sm);
+        padding: 14px;
+        border-left: 3px solid var(--color-gold);
+      }
+
+      .contact-card-icon {
+        font-size: 1.35rem;
+        line-height: 1;
+      }
+
+      .contact-card-title {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--color-gold);
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .contact-card-text {
+        font-size: 0.96rem;
+        color: var(--color-white);
+        line-height: 1.45;
+      }
+
+      /* Quick Order / Inquiry Helper */
+      .quick-order-tool {
+        background-color: var(--color-white);
+        color: var(--color-gray-900);
+        border-radius: var(--radius-md);
+        padding: 22px;
+        border: 1.5px solid var(--color-gold);
+      }
+
+      .tool-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 14px;
+        text-align: center;
+      }
+
+      .tool-form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .form-label {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--color-gray-700);
+      }
+
+      .form-select, .form-input {
+        padding: 10px 12px;
+        border: 1px solid var(--color-gray-200);
+        border-radius: var(--radius-sm);
+        font-size: 0.95rem;
+        background-color: var(--color-gray-50);
+        outline: none;
+      }
+
+      .form-select:focus, .form-input:focus {
+        border-color: var(--color-gold);
+        background-color: var(--color-white);
+      }
+
+      .btn-generate-wa {
+        background-color: var(--color-whatsapp);
+        color: var(--color-white);
+        border: none;
+        padding: 13px;
+        font-weight: 600;
+        font-size: 0.98rem;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: background-color 0.15s ease;
+      }
+
+      .btn-generate-wa:hover {
+        background-color: var(--color-whatsapp-hover);
+      }
+
+      /* --- 7. FOOTER --- */
+      #main-footer {
+        background-color: var(--color-primary-dark);
+        color: #9ca3af;
+        padding: 40px 0 24px;
+        border-top: 1px solid var(--color-gold);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-bottom: 28px;
+      }
+
+      .footer-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .footer-logo-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .footer-desc {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        color: #d1d5db;
+      }
+
+      .footer-heading {
+        color: var(--color-gold);
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+
+      .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .footer-links a {
+        font-size: 0.92rem;
+        color: #d1d5db;
+        transition: color 0.15s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-gold);
+      }
+
+      .footer-contact-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 0.92rem;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: #d1d5db;
+        line-height: 1.5;
+      }
+
+      .footer-contact-item span.icon {
+        color: var(--color-gold);
+        font-size: 1.05rem;
+      }
+
+      .footer-contact-item a {
+        color: var(--color-gold);
+        font-weight: 500;
+      }
+
+      .footer-bottom {
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+        font-size: 0.84rem;
+        color: #6b7280;
+      }
+
+      /* --- 8. FLOATING WHATSAPP BUTTON (Sticky bottom-right) --- */
+      .floating-whatsapp-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 18px;
+        width: 56px;
+        height: 56px;
+        background-color: var(--color-whatsapp);
+        color: var(--color-white);
+        border-radius: var(--radius-full);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+        z-index: 1001;
+        border: 2px solid var(--color-white);
+        transition: transform 0.2s ease;
+      }
+
+      .floating-whatsapp-btn:hover {
+        transform: scale(1.05);
+      }
+
+      .floating-whatsapp-btn svg {
+        width: 30px;
+        height: 30px;
+        fill: currentColor;
+      }
+
+      .floating-badge-text {
+        display: none;
+      }
+
+      /* --- RESPONSIVE MEDIA QUERIES --- */
+      @media (min-width: 640px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .hero-cta-group {
+          flex-direction: row;
+        }
+        .finishes-trio-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .contact-info-list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 768px) {
+        .nav-links-desktop {
+          display: flex;
+        }
+        .header-cta-btn {
+          display: inline-flex;
+        }
+        .hamburger-btn {
+          display: none;
+        }
+        .hero-headline {
+          font-size: 2.75rem;
+        }
+        .hero-subtext {
+          font-size: 1.15rem;
+        }
+        .section-title {
+          font-size: 2.2rem;
+        }
+        .catalog-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 18px;
+        }
+        .contact-grid-wrap {
+          grid-template-columns: 1.2fr 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 2fr 1fr 1.5fr;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .catalog-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .services-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .floating-badge-text {
+          display: inline-block;
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: var(--color-white);
+          margin-left: 8px;
+        }
+        .floating-whatsapp-btn {
+          width: auto;
+          height: auto;
+          padding: 12px 20px;
+          border-radius: var(--radius-full);
+        }
+        .floating-whatsapp-btn svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. ANIMATED PRELOADER / LOADING SCREEN -->
+    <div id="preloader" aria-label="Loading Ola Mai Fila">
+      <div class="preloader-spinner-wrap">
+        <div class="preloader-ring"></div>
+        <img
+          src="logo.png"
+          alt="Ola Mai Fila Logo"
+          class="preloader-logo"
+          onerror="this.onerror=null; this.src='logo.jpg';"
+        />
+      </div>
+      <div class="preloader-text">Loading Ola Mai Fila...</div>
+    </div>
+
+    <!-- 2. STICKY HEADER -->
+    <header id="main-header">
+      <div class="container header-inner">
+        <!-- Logo Left -->
+        <a href="#home" class="brand-logo-wrap" id="header-brand-link">
+          <img
+            src="logo.png"
+            alt="Ola Mai Fila Logo"
+            class="brand-logo-img"
+            style="height: 45px; width: 45px;"
+            onerror="this.onerror=null; this.src='logo.jpg';"
+          />
+          <div class="brand-text">
+            <span class="brand-name">OLA MAI FILA</span>
+            <span class="brand-sub">COMPANY • ILORIN</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-links-desktop" aria-label="Main Navigation">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#shop" class="nav-link">Shop</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Desktop Action Button -->
+        <a
+          href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20inquire%20about%20cap%20washing%20or%20buying."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="header-cta-btn"
+          id="header-cta"
+        >
+          Book on WhatsApp
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          class="hamburger-btn"
+          id="hamburger-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Nav Overlay & Drawer -->
+    <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a href="#home" class="mobile-link">Home <span>→</span></a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#services" class="mobile-link">Services (Washing &amp; Neating) <span>→</span></a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#shop" class="mobile-link">Shop (Cap Store Catalog) <span>→</span></a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#contact" class="mobile-link">Contact &amp; Location <span>→</span></a>
+        </li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a
+          href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20book%20a%20service."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mobile-drawer-cta"
+        >
+          💬 Chat on WhatsApp (+2349065976587)
+        </a>
+        <a href="tel:+2348131050509" class="mobile-phone-link">
+          📞 Direct Call: 08131050509 / 09065976587
+        </a>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      <!-- 3. HERO BANNER -->
+      <section class="hero-section" id="home">
+        <div class="container hero-content">
+          <div class="hero-badge-pill">
+            Traditional Cap Specialists
+          </div>
+
+          <h1 class="hero-headline">
+            Premium Cap Washing, Neating &amp; Sales in <span>Ilorin</span>
+          </h1>
+
+          <p class="hero-subtext">
+            Master hand-washing, reshaping, and stiffening for your prized Hausa caps, Tajia, and Ofi. Handcrafted traditional caps available for direct order.
+          </p>
+
+          <!-- Feature Highlights Bar -->
+          <div class="finish-badges-bar">
+            <span class="finish-tag"><span class="tag-star">⭐</span> Starch Only</span>
+            <span class="finish-divider">|</span>
+            <span class="finish-tag"><span class="tag-star">⭐</span> Tanganran</span>
+            <span class="finish-divider">|</span>
+            <span class="finish-tag"><span class="tag-star">⭐</span> Glass Finish</span>
+          </div>
+
+          <!-- Primary CTA Buttons -->
+          <div class="hero-cta-group">
+            <a
+              href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20inquire%20about%20cap%20washing%2C%20neating%2C%20or%20buying."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cta-btn btn-whatsapp-primary"
+              id="hero-wa-btn"
+            >
+              💬 Inquire on WhatsApp
+            </a>
+            <a href="#shop" class="cta-btn btn-outline-gold" id="hero-store-btn">
+              Browse Cap Store
+            </a>
+          </div>
+
+          <div class="hero-quick-perks">
+            <div class="perk-item">📍 Banni Area, Ilorin</div>
+            <div class="perk-item">⚡ 24-48h Service</div>
+            <div class="perk-item">✨ Traditional Precision</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SERVICES SECTION (Cap Washing & Neating - No Prices) -->
+      <section class="services-section" id="services">
+        <div class="container">
+          <div class="section-heading-wrap">
+            <span class="section-eyebrow">Professional Cap Care</span>
+            <h2 class="section-title">Cap Washing &amp; Neating Services</h2>
+            <p class="section-desc">
+              We restore dirty, softened, or faded caps into razor-sharp, crisp headwear. Tailored wash formulas that protect delicate embroidery threads.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <!-- Card 1: Hausa Caps -->
+            <div class="service-card" id="service-hausa">
+              <div class="service-card-header">
+                <div class="service-icon-box">👑</div>
+                <div>
+                  <h3 class="service-title">Hausa Cap Washing &amp; Neating</h3>
+                  <span class="service-types-sub">Zanna Bukar, Damanga, Marafa, Standard Hausa</span>
+                </div>
+              </div>
+              <p class="service-desc">
+                Specialized gentle hand-scrubbing that dissolves sweat and dirt stains without bleeding vibrant thread dyes. Precision blocked to preserve the authentic shape.
+              </p>
+              <div class="service-finishes-box">
+                <strong>Available Finishes:</strong> Starch Only • Tanganran • Glass Finish
+              </div>
+              <ul class="service-features-list">
+                <li>Deep thread sanitization and deodorizing</li>
+                <li>Zero thread fraying or shrinkage</li>
+                <li>Customized stiffness to match your comfort</li>
+              </ul>
+              <a
+                href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20book%20a%20cap%20washing/neating%20service%20for%20my%20Hausa%20cap."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-btn btn-whatsapp-primary btn-whatsapp"
+              >
+                Book on WhatsApp
+              </a>
+            </div>
+
+            <!-- Card 2: Tajia Caps -->
+            <div class="service-card" id="service-tajia">
+              <div class="service-card-header">
+                <div class="service-icon-box">✨</div>
+                <div>
+                  <h3 class="service-title">Royal Tajia Cap Restoration</h3>
+                  <span class="service-types-sub">Velvet Tajia, Royal Folded, Traditional Tajia</span>
+                </div>
+              </div>
+              <p class="service-desc">
+                Velvet and heavy fabrics require delicate care. We gently remove oils, dust, and lint, then starch and press with a balanced mold to keep the crown sharp and majestic.
+              </p>
+              <div class="service-finishes-box">
+                <strong>Available Finishes:</strong> Starch Only • Tanganran • Glass Finish
+              </div>
+              <ul class="service-features-list">
+                <li>Velvet pile restoration without flattening</li>
+                <li>Symmetrical ridge and peak alignment</li>
+                <li>Long-lasting starch hold for ceremonies</li>
+              </ul>
+              <a
+                href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20book%20a%20cap%20washing/neating%20service%20for%20my%20Tajia%20cap."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-btn btn-whatsapp-primary btn-whatsapp"
+              >
+                Book on WhatsApp
+              </a>
+            </div>
+
+            <!-- Card 3: Ofi Caps -->
+            <div class="service-card" id="service-ofi">
+              <div class="service-card-header">
+                <div class="service-icon-box">🧵</div>
+                <div>
+                  <h3 class="service-title">Traditional Ofi (Aso-Oke) Caps</h3>
+                  <span class="service-types-sub">Gobi, Abeti Aja, Handwoven Ilorin Ofi</span>
+                </div>
+              </div>
+              <p class="service-desc">
+                Ilorin is famous for authentic Aso-Ofi. We preserve handloom threads, metallic strips, and fabric integrity while applying crisp starching that makes the cap stand proud.
+              </p>
+              <div class="service-finishes-box">
+                <strong>Available Finishes:</strong> Starch Only • Tanganran • Glass Finish
+              </div>
+              <ul class="service-features-list">
+                <li>Gentle wash preserving metallic shine</li>
+                <li>Firm crease alignment for Gobi or Abeti Aja</li>
+                <li>Moisture and sweat resistant treatment</li>
+              </ul>
+              <a
+                href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20book%20a%20cap%20washing/neating%20service%20for%20my%20Ofi%20cap."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-btn btn-whatsapp-primary btn-whatsapp"
+              >
+                Book on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Finishes Guide Banner -->
+          <div class="finishes-banner" id="finishes-guide">
+            <h3 class="finishes-banner-title">⭐ Starching &amp; Finishing Standards</h3>
+            <p class="finishes-banner-desc">
+              Choose the exact stiffness and sheen that matches your preference and occasion.
+            </p>
+
+            <div class="finishes-trio-grid">
+              <div class="finish-trio-card">
+                <h4>⭐ Starch Only</h4>
+                <p>
+                  Natural, comfortable firm touch. Ideal for daily casual wear, light work days, and people who prefer a softer, flexible fit on the head.
+                </p>
+              </div>
+
+              <div class="finish-trio-card">
+                <h4>🛡️ Tanganran Finish</h4>
+                <p>
+                  The time-honored traditional rock-hard stiffness. Your cap maintains an immovable structure and razor-sharp crease through full days of events.
+                </p>
+              </div>
+
+              <div class="finish-trio-card">
+                <h4>✨ Glass Finish</h4>
+                <p>
+                  Our signature royal treatment. Combines unmatched stiffness with a smooth, glossy protective sheen that repels moisture and gives your cap a radiant luster.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. CAP STORE CATALOG (Cap Selling - Clean 2-Column Mobile Grid, No Prices) -->
+      <section class="store-section" id="shop">
+        <div class="container">
+          <div class="section-heading-wrap">
+            <span class="section-eyebrow">Ready-To-Wear Collection</span>
+            <h2 class="section-title">Cap Store Catalog</h2>
+            <p class="section-desc">
+              Handcrafted authentic Nigerian caps in pristine condition. Tap to order directly via WhatsApp for swift delivery.
+            </p>
+          </div>
+
+          <!-- Category Filter Bar -->
+          <div class="catalog-filters" id="catalog-filters">
+            <button class="filter-btn active" data-filter="all">All Caps</button>
+            <button class="filter-btn" data-filter="hausa">Hausa Caps</button>
+            <button class="filter-btn" data-filter="tajia">Tajia Caps</button>
+            <button class="filter-btn" data-filter="ofi">Ofi (Aso-Oke)</button>
+          </div>
+
+          <!-- Clean 2-Column Mobile Grid (No Prices) -->
+          <div class="catalog-grid" id="catalog-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-category="hausa">
+              <div class="product-img-wrap">
+                <span class="product-badge">Hausa</span>
+                <img
+                  src="hausa_cap.jpg"
+                  alt="Handcrafted Hausa Cap"
+                  class="product-img"
+                  onerror="this.onerror=null; this.src='logo.png';"
+                />
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Handcrafted Hausa Cap</h3>
+                <span class="product-meta">Intricate needlework • All Sizes</span>
+                <a
+                  href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20order%20the%20Handcrafted%20Hausa%20Cap."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-order-product"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                  Order via WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="tajia">
+              <div class="product-img-wrap">
+                <span class="product-badge">Tajia</span>
+                <img
+                  src="tajia_ofi.jpg"
+                  alt="Royal Tajia Velvet Cap"
+                  class="product-img"
+                  onerror="this.onerror=null; this.src='logo.png';"
+                />
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Royal Tajia Velvet Cap</h3>
+                <span class="product-meta">Premium Velvet • Glass Finish</span>
+                <a
+                  href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20order%20the%20Royal%20Tajia%20Velvet%20Cap."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-order-product"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                  Order via WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="ofi">
+              <div class="product-img-wrap">
+                <span class="product-badge">Ofi (Aso-Oke)</span>
+                <img
+                  src="cap_finish.jpg"
+                  alt="Traditional Embroidered Ofi Cap"
+                  class="product-img"
+                  onerror="this.onerror=null; this.src='logo.png';"
+                />
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Traditional Embroidered Ofi Cap</h3>
+                <span class="product-meta">Handwoven Ilorin Ofi • Crisp Crease</span>
+                <a
+                  href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20order%20the%20Traditional%20Embroidered%20Ofi%20Cap."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-order-product"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                  Order via WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-category="hausa">
+              <div class="product-img-wrap">
+                <span class="product-badge">Zanna Bukar</span>
+                <img
+                  src="hausa_cap.jpg"
+                  alt="Zanna Bukar Geometric Cap"
+                  class="product-img"
+                  onerror="this.onerror=null; this.src='logo.png';"
+                />
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Zanna Bukar Geometric Cap</h3>
+                <span class="product-meta">Borno heritage • High density stitches</span>
+                <a
+                  href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20order%20the%20Zanna%20Bukar%20Geometric%20Cap."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-order-product"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                  Order via WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card" data-category="tajia">
+              <div class="product-img-wrap">
+                <span class="product-badge">Tajia</span>
+                <img
+                  src="tajia_ofi.jpg"
+                  alt="Governor Style Tajia Cap"
+                  class="product-img"
+                  onerror="this.onerror=null; this.src='logo.png';"
+                />
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Governor Style Tajia Cap</h3>
+                <span class="product-meta">Executive fit • Rich black &amp; gold</span>
+                <a
+                  href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20order%20the%20Governor%20Style%20Tajia%20Cap."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-order-product"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                  Order via WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card" data-category="ofi">
+              <div class="product-img-wrap">
+                <span class="product-badge">Ofi Gobi</span>
+                <img
+                  src="cap_finish.jpg"
+                  alt="Prestige Metallic Ofi Cap"
+                  class="product-img"
+                  onerror="this.onerror=null; this.src='logo.png';"
+                />
+              </div>
+              <div class="product-body">
+                <h3 class="product-title">Prestige Metallic Ofi Cap</h3>
+                <span class="product-meta">Shimmering Aso-Oke • Wedding Ready</span>
+                <a
+                  href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20want%20to%20order%20the%20Prestige%20Metallic%20Ofi%20Cap."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-order-product"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                  Order via WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Sizing / Assistance -->
+          <div class="store-inquiry-box">
+            <p>
+              Looking for a custom cap size, rare embroidery pattern, or specific color matching for an upcoming wedding or special event?
+            </p>
+            <a
+              href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20need%20a%20custom%20cap%20order%20or%20specific%20size."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-custom-order"
+            >
+              💬 Inquire About Custom Cap Designs via WhatsApp →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. CONTACT & LOCATION SECTION (Physical Address Kept, No Delivery Bounds) -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="section-heading-wrap">
+            <span class="section-eyebrow" style="color: var(--color-gold);">Get in Touch</span>
+            <h2 class="section-title" style="color: var(--color-white);">Contact &amp; Location</h2>
+            <p class="section-desc" style="color: #d1d5db;">
+              Visit our workshop or connect directly via WhatsApp and phone for cap bookings, orders, and inquiries.
+            </p>
+          </div>
+
+          <div class="contact-grid-wrap">
+            <!-- Left Panel: Workshop & Contact Information -->
+            <div class="contact-info-panel">
+              <h3 style="color: var(--color-gold); font-size: 1.25rem; font-weight: 700;">Workshop Information</h3>
+              <p style="color: #d1d5db; font-size: 0.96rem; margin-top: 6px; line-height: 1.5;">
+                Experience master cap cleaning, reshaping, and stiffening tailored to your style. You can drop off or reach out directly anytime.
+              </p>
+
+              <div class="contact-info-list">
+                <div class="contact-info-card">
+                  <span class="contact-card-icon">📍</span>
+                  <div>
+                    <div class="contact-card-title">Physical Address:</div>
+                    <div class="contact-card-text">
+                      <strong>Ola Compound, Banni Area, Ilorin, Kwara State</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-info-card">
+                  <span class="contact-card-icon">📞</span>
+                  <div>
+                    <div class="contact-card-title">Call &amp; WhatsApp:</div>
+                    <div class="contact-card-text">
+                      <a href="tel:+2349065976587" style="color: var(--color-gold); font-weight: 600;">+234 906 597 6587</a><br/>
+                      <a href="tel:+2348131050509" style="color: var(--color-gold); font-weight: 600;">+234 813 105 0509</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-info-card">
+                  <span class="contact-card-icon">✉️</span>
+                  <div>
+                    <div class="contact-card-title">Business Email:</div>
+                    <div class="contact-card-text">
+                      <a href="mailto:issaabdullah515@gmail.com" style="color: var(--color-gold); font-weight: 500;">issaabdullah515@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-info-card">
+                  <span class="contact-card-icon">⏰</span>
+                  <div>
+                    <div class="contact-card-title">Working Hours:</div>
+                    <div class="contact-card-text">
+                      Monday – Saturday: 8:00 AM – 7:00 PM<br/>
+                      Fast Turnaround: 24–48 Hours
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Panel: Quick WhatsApp Inquiry Tool -->
+            <div class="quick-order-tool" id="quick-calculator">
+              <h3 class="tool-title">⚡ Instant WhatsApp Inquiry</h3>
+              <form class="tool-form" id="booking-form" onsubmit="handleQuickBooking(event)">
+                <div class="form-row">
+                  <label class="form-label" for="order-type">Select Service / Purchase:</label>
+                  <select class="form-select" id="order-type">
+                    <option value="Cap Washing & Neating">Cap Washing &amp; Neating Service</option>
+                    <option value="Cap Neating & Starching Only">Cap Neating &amp; Starching Only</option>
+                    <option value="Buy New Cap from Store">Buy New Cap from Store</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <label class="form-label" for="cap-type">Cap Style:</label>
+                  <select class="form-select" id="cap-type">
+                    <option value="Hausa Cap">Hausa Cap (Zanna Bukar / Damanga)</option>
+                    <option value="Tajia Cap">Tajia Velvet Cap</option>
+                    <option value="Ofi Cap">Traditional Ofi (Aso-Oke)</option>
+                    <option value="Multiple Mixed Caps">Multiple Mixed Caps</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <label class="form-label" for="finish-type">Desired Starch Finish:</label>
+                  <select class="form-select" id="finish-type">
+                    <option value="Glass Finish (Royal Gloss & Stiff)">Glass Finish (Royal Gloss &amp; Stiff)</option>
+                    <option value="Tanganran (Rock-Hard Traditional)">Tanganran (Rock-Hard Traditional)</option>
+                    <option value="Starch Only (Natural Firm Hold)">Starch Only (Natural Firm Hold)</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <label class="form-label" for="user-location">Your Name / Note:</label>
+                  <input
+                    type="text"
+                    id="user-location"
+                    class="form-input"
+                    placeholder="Enter your name or special request"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn-generate-wa" id="btn-submit-booking">
+                  <span>💬 Send Inquiry on WhatsApp (+2349065976587)</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 7. FOOTER -->
+    <footer id="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Column 1: Brand Info -->
+          <div class="footer-brand">
+            <div class="footer-logo-row">
+              <img
+                src="logo.png"
+                alt="Ola Mai Fila Logo"
+                style="height: 48px; width: 48px; border-radius: 50%; border: 1.5px solid #D4AF37;"
+                onerror="this.onerror=null; this.src='logo.jpg';"
+              />
+              <div class="brand-text">
+                <span class="brand-name" style="color: #fff; font-size: 1.15rem; font-weight: 700;">OLA MAI FILA COMPANY</span>
+                <span class="brand-sub" style="color: #D4AF37; font-size: 0.72rem; letter-spacing: 0.8px;">ILORIN, KWARA STATE</span>
+              </div>
+            </div>
+            <p class="footer-desc">
+              Your premier cap laundry, neating, and traditional headwear store in Ilorin. We specialize in Hausa caps, Tajia, and Ofi with custom Starch Only, Tanganran, and Glass Finish treatments.
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Cap Washing &amp; Neating</a></li>
+              <li><a href="#shop">Cap Store Catalog</a></li>
+              <li><a href="#contact">Contact &amp; Location</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact & Address (Physical Address) -->
+          <div>
+            <h4 class="footer-heading">Contact Details</h4>
+            <ul class="footer-contact-list">
+              <li class="footer-contact-item">
+                <span class="icon">📍</span>
+                <span>Ola Compound, Banni Area, Ilorin, Kwara State</span>
+              </li>
+              <li class="footer-contact-item">
+                <span class="icon">✉️</span>
+                <a href="mailto:issaabdullah515@gmail.com">issaabdullah515@gmail.com</a>
+              </li>
+              <li class="footer-contact-item">
+                <span class="icon">📞</span>
+                <span>
+                  <a href="tel:+2349065976587">+234 906 597 6587</a><br/>
+                  <a href="tel:+2348131050509">+234 813 105 0509</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 OLA MAI FILA COMPANY. All Rights Reserved. Ola Compound, Banni Area, Ilorin, Kwara State.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 8. FLOATING WHATSAPP BUTTON (Sticky bottom-right) -->
+    <a
+      href="https://wa.me/2349065976587?text=Hello%20Ola%20Mai%20Fila%2C%20I%20am%20chatting%20from%20your%20website%20and%20want%20to%20make%20an%20inquiry."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="floating-whatsapp-btn"
+      id="floating-whatsapp"
+      aria-label="Chat directly on WhatsApp with Ola Mai Fila"
+    >
+      <svg viewBox="0 0 24 24">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.02 16.5c-1.49 0-2.94-.39-4.22-1.13l-.3-.18-3.13.82.84-3.05-.2-.31a8.12 8.12 0 0 1-1.25-4.39c0-4.5 3.66-8.16 8.16-8.16 2.18 0 4.23.85 5.77 2.39 1.54 1.54 2.39 3.59 2.39 5.77 0 4.51-3.66 8.17-8.16 8.17zm4.47-6.12c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.68.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.07-.1-.23-.17-.48-.29z"/>
+      </svg>
+      <span class="floating-badge-text">Chat on WhatsApp</span>
+    </a>
+
+    <!-- JAVASCRIPT: Preloader, Mobile Nav, Filtering, Quick WhatsApp Booking -->
+    <script>
+      // 1. Preloader Fade-out
+      function hidePreloader() {
+        const preloader = document.getElementById('preloader');
+        if (preloader && !preloader.classList.contains('hidden')) {
+          preloader.classList.add('hidden');
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 500);
+        }
+      }
+
+      window.addEventListener('load', () => {
+        // Small delay so spinner looks smooth
+        setTimeout(hidePreloader, 400);
+      });
+
+      // Fallback timeout in case page load event takes longer
+      setTimeout(hidePreloader, 1500);
+
+      // 2. Mobile Navigation Drawer Toggle
+      const hamburgerBtn = document.getElementById('hamburger-toggle');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      const mobileOverlay = document.getElementById('mobile-overlay');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      function toggleMobileMenu() {
+        const isOpen = mobileDrawer.classList.contains('open');
+        if (isOpen) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      }
+
+      function openMobileMenu() {
+        hamburgerBtn.classList.add('open');
+        hamburgerBtn.setAttribute('aria-expanded', 'true');
+        mobileDrawer.classList.add('open');
+        mobileOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMobileMenu() {
+        hamburgerBtn.classList.remove('open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        mobileDrawer.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', toggleMobileMenu);
+      }
+
+      if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+      }
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          closeMobileMenu();
+        });
+      });
+
+      // 3. Smooth Scrolling and Active Nav Indicator
+      const navLinks = document.querySelectorAll('.nav-link');
+      window.addEventListener('scroll', () => {
+        let currentSection = '';
+        const sections = document.querySelectorAll('section, footer');
+        const scrollPosition = window.pageYOffset + 120;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + currentSection) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+      // 4. Cap Catalog Category Filtering
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const productCards = document.querySelectorAll('.product-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const category = btn.getAttribute('data-filter');
+
+          productCards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 5. Quick WhatsApp Booking / Inquiry Form Handler
+      function handleQuickBooking(event) {
+        event.preventDefault();
+        const orderType = document.getElementById('order-type').value;
+        const capType = document.getElementById('cap-type').value;
+        const finishType = document.getElementById('finish-type').value;
+        const note = document.getElementById('user-location').value.trim();
+
+        const message = `Hello Ola Mai Fila Company, I want to make an inquiry via your website:
+• Request: ${orderType}
+• Cap Style: ${capType}
+• Starch Finish: ${finishType}
+• Customer Note: ${note}
+
+Please let me know the details and turnaround timeline. Thank you!`;
+
+        const encodedMessage = encodeURIComponent(message);
+        const waUrl = `https://wa.me/2349065976587?text=${encodedMessage}`;
+
+        window.open(waUrl, '_blank');
+      }
+    </script>
+  </body>
+</html>
