@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ola-tech-git-main-abdulhakeem-ola.vercel.app/sitemap.xml
